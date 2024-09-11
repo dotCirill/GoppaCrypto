@@ -3,7 +3,7 @@ class McElieceCryptosystem:
 	def __init__(self, n, m, g):
 		#Construct the Goppa code
 		goppa_code = GoppaCode(n,m,g);
-		assert goppa_code.generator_matrix().nrows() <> 0, "Generator Matrix is empty.";
+		assert goppa_code.generator_matrix().nrows() != 0, "Generator Matrix is empty.";
 		k = goppa_code.generator_matrix().nrows();
 
 		# Set up the random scrambler matrix
